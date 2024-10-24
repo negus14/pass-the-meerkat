@@ -1,129 +1,204 @@
+/* Base Styles */
 html, body {
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    scroll-behavior: smooth;
-  }
-  
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  font-family: Arial, sans-serif;
+}
+
+/* Hero Content */
 .hero-content {
-    position: flex; /* Ensure this content can be layered */
-    z-index: 0; /* Bring the content above the background */
-    color: white; /* Change text color for visibility */
-    text-align: center; /* Center the text */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 2rem;
 }
 
+/* Responsive Headings */
 h1 {
-    margin: 50px 0; /* Add some margin for spacing */
-    color: rgb(255, 255, 255);
-    font-size: 8rem;
-    opacity: 90%;
-    padding: 2rem;
+  margin: 2rem 0;
+  color: rgb(255, 255, 255);
+  font-size: 5rem; /* Reduce the size for better responsiveness */
+  opacity: 90%;
+  padding: 5rem;
 }
 
-p { 
-    color: rgb(255, 255, 255);
-    font-size: 0.75rem;
-    font-weight: 500;
-    opacity: 90%;
+/* Responsive Paragraphs */
+p {
+  color: rgb(255, 255, 255);
+  font-size: 1rem; /* Adjust the font size for readability */
+  font-weight: 500;
+  opacity: 90%;
 }
 
+/* Links (for buttons or interactions) */
 a {
-    margin: 1rem; /* Space between buttons */
-    display: inline-block; /* Allow spacing around buttons */
-    transition: transform 0.3s ease, filter 0.3s ease;
+  margin: 1rem;
+  display: inline-block;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 a:hover {
-    filter: brightness(1.0);
-}  
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-  }
-
-  .section {
-    height: 100vh; /* Full viewport height */
-    /* width: 100vw; */
-    justify-content: flex;
-    /* align-items: center; */
-    text-align: center;
-    background-position: center;
-  }
-  
-  /* Background for Section 1 */
-  #section1 {
-    align-items: flex; 
-    background-image: url('../assets/image5.jpg'); 
-    background-position: center;
-    background-size: auto;
-    background-size: cover;  /* Make sure the background covers the entire container */
-    /* justify-content: center; */
-    padding: 8rem;
-    position: relative;  /* Set relative positioning for absolute children */
-  }
-  
-  #logo {
-    position: absolute;  /* This allows it to be placed on top of the background */
-    height: auto;  /* Maintain the logo's aspect ratio */
-    top: 45%;  /* Center it vertically */
-    left: 50%;  /* Center it horizontally */
-    transform: translate(-50%, -50%);  /* Move the logo back by 50% to make it truly centered */
-    width: 75rem;  /* Adjust this value to increase the width */
-    height: auto;  /* Maintain aspect ratio */
-    background-blend-mode: darken;
+  filter: brightness(1.0);
 }
 
-  #section2 {
-    display: flex;
-    color: white;
-    align-items: center;    /* Center the items horizontally */
-    background-color: black;
-    justify-content: center;  /* Center the items vertically */
+/* Section Styling */
+.section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex;
+  text-align: center;
+  background-position: center;
+  padding: 2rem;
+  background-repeat: no-repeat;
+}
+
+#section1 {
+  align-items: flex; 
+  background-image: url('../assets/image5.jpg');
+  padding-top: 15rem;
+  background-size: cover;
+  position: relative;
+  align-items: center; 
+  min-height: 100vh;        /* Full viewport height */
+    /* Center content horizontally */
+}
+
+/* Logo Responsive Positioning */
+#logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  width: 100%;
+  max-width: 75rem; /* Make the logo responsive */
+  height: auto;
+}
+
+#section2, #section3, #section4, #section5 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  /* padding: 4rem 2rem; */
+  text-align: center;
+}
+
+/* Section 2 */
+#section2 {
+  background-color: black;
+}
+
+#section2 p {
+  color: white;
+  font-size: 1.25rem; /* Adjust size for better readability on small screens */
+}
+
+/* Section 3 */
+#section3 {
+  background-color: #69C9D0;
+}
+
+#section3 h1 {
+  color: #EE1D52;
+  font-size: 5rem; /* Smaller font size */
+}
+
+/* Section 4 */
+#section4 {
+  background-color: #282828;
+}
+
+#section4 h1 {
+  color: #FF0000;
+  font-size: 5rem;
+}
+
+/* Section 5 */
+#section5 {
+  background-color: #1DB954;
+}
+
+#section5 h1 {
+  color: #191414;
+  font-size: 5rem;
+}
+
+/* Media Queries for Small Screens */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3rem; /* Reduce heading size on smaller screens */
   }
 
-  #section3 {
-    display: flex;
-    align-items: center;    /* Center the items horizontally */
-    background-color: #69C9D0;
-    justify-content: center;
-    padding: 2rem;
-  }
-  
-  #section4 {
-    display: flex;
-    align-items: center;    /* Center the items horizontally */
-    background-color: #282828;
-    justify-content: center;
-    padding: 2rem;
+  p {
+    font-size: 0.875rem; /* Adjust paragraph text size */
   }
 
-  #section5 {
+  #section1 {
+    background-size: contain;  /* Contain the image without cropping on tablets */
+    background-position: center;  /* Ensure the image is centered */
+    width: 100%;
+    height: 100%;
+  }
+
+  #section2, #section3, #section4, #section5 {
     display: flex;
-    align-items: center;    /* Center the items horizontally */
-    background-color: #1DB954;
-    padding-bottom: 5rem;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    padding: 4rem 2rem;
+    text-align: center;
   }
 
   #section2 p {
-    color: white;
-    font-size: 1.5rem;
-    padding: 5rem;
+    padding: 2rem; /* Reduce padding for smaller screens */
   }
 
-  #section3 h1 {
-    color: #EE1D52;
-    padding: 6rem;
+  #logo {
+    width: 60%;
+    top: 40%; /* Adjust logo position on smaller screens */
+  }
+}
+
+/* Media Query for Very Small Screens (Mobile) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
   }
 
-  #section4 h1 {
-    color: #FF0000;
-    padding: 2rem;
+  p {
+    font-size: 0.75rem;
   }
 
-  #section5 h1 {
-    color: #191414;
-    padding: 3rem;
+  #logo {
+    width: 100%;
+    top: 15%; /* Adjust logo position on smaller screens */
   }
+
+  .section {
+    padding: 1rem; /* Reduce padding for small devices */
+  }
+
+  #section1 {
+    background-image: url('../assets/image6.jpg');
+    display: flex;
+    background-size: 100% 100%;  /* Stretch the image to fit the container width and height */
+    background-position: center;  /* Keep the image centered vertically but align towards the top */
+    background-color: black;
+    font-size: 5rem;
+  }
+
+  #section2 p {
+    padding: 1.5rem; /* Reduce padding */
+  }
+
+  #section2 h1, #section3 h1, #section4 h1, #section5 h1 {
+    padding: 1.5rem; /* Reduce padding */
+    font-size: 2rem;
+  }
+}

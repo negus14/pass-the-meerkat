@@ -38,7 +38,7 @@
     background-color: white; /* Opaque background for dropdown */
     min-width: 10rem; /* Set a width */
     z-index: 20; /* Ensure the dropdown is above other elements */
-  }
+  }T
   
   .dropdown-content a {
     color: black; /* Change link color */

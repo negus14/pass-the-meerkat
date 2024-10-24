@@ -7,10 +7,11 @@
     background-color: black; /* No background color */
     position: relative;
     z-index: 5;
+    flex-wrap: wrap; /* Allows icons to wrap on smaller screens */
   }
   
   .footer a {
-    margin: 4rem;
+    margin: 1rem;
     transition: transform 0.3s ease, filter 0.3s ease;
   }
   
@@ -20,3 +21,15 @@
   }
   
   
+  /* Responsive styles */
+@media (max-width: 768px) {
+  .icon {
+    size: 3rem; /* Decrease icon size */
+  }
+}
+
+@media (max-width: 480px) {
+  .icon {
+    size: 3rem; /* Even smaller icons for mobile */
+  }
+}

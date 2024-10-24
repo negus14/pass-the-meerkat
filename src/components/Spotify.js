@@ -1,12 +1,11 @@
 import React from 'react';
+import './Spotify.css'; // Import the CSS file
 
 const Spotify = () => {
   return (
-    <div>
+    <div className="video-responsive">
       <iframe
           src="https://open.spotify.com/embed/show/35QfAzsh3JcvO6fxz1pmvl/video?utm_source=generator"
-          width="624"
-          height="351"
           allowFullScreen=""
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
           loading="lazy">

@@ -1,0 +1,42 @@
+/* CSS to make the TikTok video responsive */
+.tiktok-responsive {
+
+  position: relative;
+  width: 150%; /* Make it 80% of the parent width (adjustable) */
+  height: 40%;
+  max-width: 325px; 
+  padding-bottom: 30%; /* Aspect ratio of 16:9 */
+  overflow: hidden;
+}
+
+.tiktok-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media (max-width: 768px) {
+  .tiktok-responsive {
+    position: relative;
+    width: 150%; /* Make it 80% of the parent width (adjustable) */
+    height: 100%;
+    max-width: 325px; 
+    padding-bottom: 30%; /* Aspect ratio of 16:9 */
+    overflow: hidden;
+  }
+}
+
+/* Media Query for Very Small Screens (Mobile) */
+@media (max-width: 480px) {
+  .tiktok-responsive {
+    position: relative;
+    width: 150%; /* Make it 80% of the parent width (adjustable) */
+    height: 100%;
+    max-width: 325px; 
+    padding-bottom: 30%; /* Aspect ratio of 16:9 */
+    overflow: hidden;
+  }
+}

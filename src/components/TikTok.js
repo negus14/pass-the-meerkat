@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import './TikTok.css'; // Import CSS for styling
 
 // Helper function to extract the TikTok video ID from the URL
 const extractVideoId = (url) => {
@@ -14,17 +15,17 @@ const TikTok = ({ videoUrl }) => {
     return <div>Invalid TikTok URL</div>;
   }
 
-    // TikTok's embed iframe URL format
-    const tiktokIframeUrl = `https://www.tiktok.com/embed/v2/${videoId}`;
+  // TikTok's embed iframe URL format
+  const tiktokIframeUrl = `https://www.tiktok.com/embed/${videoId}`;
 
   return (
-    <div>
+    <div className="tiktok-responsive">
       <iframe
         src={tiktokIframeUrl}
-        width="100%"
-        height="745"
+        frameBorder="0"
         allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
         allowFullScreen
+        title="TikTok Video"
       />
     </div>
   );
