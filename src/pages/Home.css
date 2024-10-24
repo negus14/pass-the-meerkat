@@ -1,0 +1,129 @@
+html, body {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    scroll-behavior: smooth;
+  }
+  
+.hero-content {
+    position: flex; /* Ensure this content can be layered */
+    z-index: 0; /* Bring the content above the background */
+    color: white; /* Change text color for visibility */
+    text-align: center; /* Center the text */
+}
+
+h1 {
+    margin: 50px 0; /* Add some margin for spacing */
+    color: rgb(255, 255, 255);
+    font-size: 8rem;
+    opacity: 90%;
+    padding: 2rem;
+}
+
+p { 
+    color: rgb(255, 255, 255);
+    font-size: 0.75rem;
+    font-weight: 500;
+    opacity: 90%;
+}
+
+a {
+    margin: 1rem; /* Space between buttons */
+    display: inline-block; /* Allow spacing around buttons */
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+a:hover {
+    filter: brightness(1.0);
+}  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+
+  .section {
+    height: 100vh; /* Full viewport height */
+    /* width: 100vw; */
+    justify-content: flex;
+    /* align-items: center; */
+    text-align: center;
+    background-position: center;
+  }
+  
+  /* Background for Section 1 */
+  #section1 {
+    align-items: flex; 
+    background-image: url('../assets/image5.jpg'); 
+    background-position: center;
+    background-size: auto;
+    background-size: cover;  /* Make sure the background covers the entire container */
+    /* justify-content: center; */
+    padding: 8rem;
+    position: relative;  /* Set relative positioning for absolute children */
+  }
+  
+  #logo {
+    position: absolute;  /* This allows it to be placed on top of the background */
+    height: auto;  /* Maintain the logo's aspect ratio */
+    top: 45%;  /* Center it vertically */
+    left: 50%;  /* Center it horizontally */
+    transform: translate(-50%, -50%);  /* Move the logo back by 50% to make it truly centered */
+    width: 75rem;  /* Adjust this value to increase the width */
+    height: auto;  /* Maintain aspect ratio */
+    background-blend-mode: darken;
+}
+
+  #section2 {
+    display: flex;
+    color: white;
+    align-items: center;    /* Center the items horizontally */
+    background-color: black;
+    justify-content: center;  /* Center the items vertically */
+  }
+
+  #section3 {
+    display: flex;
+    align-items: center;    /* Center the items horizontally */
+    background-color: #69C9D0;
+    justify-content: center;
+    padding: 2rem;
+  }
+  
+  #section4 {
+    display: flex;
+    align-items: center;    /* Center the items horizontally */
+    background-color: #282828;
+    justify-content: center;
+    padding: 2rem;
+  }
+
+  #section5 {
+    display: flex;
+    align-items: center;    /* Center the items horizontally */
+    background-color: #1DB954;
+    padding-bottom: 5rem;
+    justify-content: center;
+  }
+
+  #section2 p {
+    color: white;
+    font-size: 1.5rem;
+    padding: 5rem;
+  }
+
+  #section3 h1 {
+    color: #EE1D52;
+    padding: 6rem;
+  }
+
+  #section4 h1 {
+    color: #FF0000;
+    padding: 2rem;
+  }
+
+  #section5 h1 {
+    color: #191414;
+    padding: 3rem;
+  }

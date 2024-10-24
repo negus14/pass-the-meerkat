@@ -1,0 +1,52 @@
+.navbar {
+    display: flex; /* Align items in a row */
+    justify-content: space-between; /* Space out logo and navbar */
+    align-items: center; /* Center vertically */
+    background-color: white; /* Set to transparent for overlay effect */
+    position: sticky; /* or fixed if you want it to stay on top */
+    padding: 1rem;
+    position: relative; /* Ensure it's positioned */
+    z-index: 10; /* Higher z-index */
+}  
+  
+ 
+  .link {
+    text-decoration: none; /* Remove underline */
+    color: white; /* Link color */
+    padding: 2rem;
+    font-weight: bold; /* Make links bold */
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropbtn {
+    background-color: white; /* Transparent button */
+    color: black; /* Button text color */
+    font-weight: bold;
+    font-size: large;
+    border: none;
+    cursor: pointer;
+    padding: 1rem;
+  }
+  
+  .dropdown-content {
+    display: block;
+    position: absolute;
+    background-color: white; /* Opaque background for dropdown */
+    min-width: 10rem; /* Set a width */
+    z-index: 20; /* Ensure the dropdown is above other elements */
+  }
+  
+  .dropdown-content a {
+    color: black; /* Change link color */
+    padding: 1rem;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd; /* Change hover color */
+  }

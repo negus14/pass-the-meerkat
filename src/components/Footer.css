@@ -1,0 +1,22 @@
+/* Footer.css */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: black; /* No background color */
+    position: relative;
+    z-index: 5;
+  }
+  
+  .footer a {
+    margin: 4rem;
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+  
+  .footer a:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+  }
+  
+  

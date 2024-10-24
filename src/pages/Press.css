@@ -1,0 +1,15 @@
+.links-grid {
+    display: flex;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust column size */
+    gap: 2rem;
+    padding: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .link-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    /* transition: transform 0.3s ease; */
+  }
